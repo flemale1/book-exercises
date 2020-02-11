@@ -1,0 +1,41 @@
+---
+title: "R Markdown Demo"
+author: "Alex Fleming"
+date: "2/11/2020"
+output: html_document
+---
+
+## This is my report!
+
+I like writing **reports**.
+
+
+```{r example, echo = FALSE}
+library(knitr)
+# doing {r} makes the code executable, the word after is the name
+# echo = false makes the code invisible
+# include = false makes it so that no outputs are outputted
+numbers <- runif(1:100)
+hist(numbers)
+numbers_mean <- mean(numbers)
+
+hello <- "**hello world**"  # saving something to a variable and using inline r
+                            # will get that thing and print it instead of printing the vector
+                            # use markdown formatting to make it formatted
+
+# use kable function to make tables nice, don't have time to make one
+
+
+```
+
+The mean of the numbers happens to be `r numbers_mean`.
+
+Here is a message: `r hello`.
+
+
+```{r other_chunk, include = FALSE}
+source("exercise.r")
+print(numbers)
+
+```
+`r kable(reviews)`
