@@ -36,7 +36,7 @@ response <- GET(uri, query = query_params)
 body <- content(response, "text")
 data <- fromJSON(body)
 
-# this no longer works because NYT fucked us over, but that's the syntax
+# this no longer works because NYT screwed us over, but that's the syntax
 
 
 
